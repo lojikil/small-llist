@@ -1,0 +1,11 @@
+A simple linked list library.
+For more info check llist.h and list_test.c
+If you want to use mmap() instead of malloc() check the Makefile
+
+To compile the lib:
+
+	make
+
+To compile with example:
+
+	make example

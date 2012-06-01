@@ -278,7 +278,8 @@ void	list_destroy(llist_t *list) {
 
 	node = list;
 
-	while (node->next != NULL) {
+	while (node != NULL) {
+		printf("Del: %s\n", node->data);
 		next = node->next;
 		_memfree(node->data, node->size);
 		node->data = NULL;
@@ -287,9 +288,6 @@ void	list_destroy(llist_t *list) {
 		node->size = 0;
 		node = next;
 	}
-
-	/* destroy the root node */
-	_memfree(list->data, list->size);
 
 	return;
 }

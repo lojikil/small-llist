@@ -279,7 +279,9 @@ void	list_destroy(llist_t *list) {
 	node = list;
 
 	while (node != NULL) {
+#ifdef DEBUG
 		printf("Del: %s\n", node->data);
+#endif
 		next = node->next;
 		_memfree(node->data, node->size);
 		node->data = NULL;
